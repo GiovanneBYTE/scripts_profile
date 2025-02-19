@@ -2,7 +2,7 @@
 
 known_hosts=$HOME/.ssh/known_hosts
 
-read -p "Digite o octeto do host:" host_line
+read -p "Digite os dois ultimos octetos do host:" host_line
 
 if grep -q "$host_line" "$known_hosts"; then
 	sed -i "/$host_line/d" "$known_hosts"
